@@ -1,0 +1,22 @@
+name: Deploy Kodi Repo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Generate Repo
+        run: |
+          chmod +x generate_repo.sh
+          ./generate_repo.sh
+          
+      - name: Deploy to GitHub
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.koditvsat }}
+          publish_dir: ./repo
