@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<addons>
+    <addon id="repository.freeshot" version="1.0.0" name="FreeShot Repository">
+        <extension point="xbmc.addon.repository">
+            <dir>
+                <info>https://raw.githubusercontent.com/yaya61/freeshot-kodi-repo/main/repo/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/yaya61/freeshot-kodi-repo/main/repo/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/yaya61/freeshot-kodi-repo/main/repo/</datadir>
+            </dir>
+        </extension>
+    </addon>
+</addons>
